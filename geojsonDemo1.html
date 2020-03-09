@@ -20,12 +20,12 @@
 	mapboxgl.accessToken = 'pk.eyJ1Ijoic2xpYmJ5IiwiYSI6ImNrN2RuemJjMTFydjYzbW51NG94NmRwNDgifQ.LleoNJTEE8ficVvguCP_zg';
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style: 'mapbox://styles/slibby/ck7klhx2t4fye1impulwchktx',
         zoom: 3,
         center: [-100.0, 50.0]
     });
     // Modify this to place your own map service URL here. Show one or more provinces--do not just show Ontario like this example. 
-    var url = 'https://luna.flemingcollege.ca/arcgis/rest/services/Geom99/slibbyCanadaPro/MapServer/0/query?where=PRNAME%3D%27Ontario%27&returnGeometry=true&returnTrueCurves=false&returnExtentOnly=false&f=geojson';
+    var url = 'https://luna.flemingcollege.ca/arcgis/rest/services/Geom99/slibbyCanadaPro/MapServer/0/query?where=PRNAME%3D%27Yukon%27&returnGeometry=true&returnTrueCurves=false&returnExtentOnly=false&f=geojson';
     map.on('load', function() {
         window.setInterval(function() {
             map.getSource('canada').setData(url);
@@ -37,7 +37,7 @@
             'type': 'fill',
             'source': 'canada',
             'layout': {},
-            'paint': {'fill-color': '#088','fill-opacity': 0.8}
+            'paint': {'fill-color': '#DF6FD5','fill-opacity': 0.85}
         });
     });
 </script>
